@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Let's Kickstart ML</title>
+
+		<meta name="description" content="Experience">
+		<meta name="author" content="Paradox">
+
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="./css/reveal.css">
+		<link rel="stylesheet" href="./css/theme/league.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? './css/print/pdf.css' : './css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+                <section>
+                    <div style="font-size: 2.8em">Let's Kickstart<br><font color="#90caf9"><span style="font-size:1.3em">ML</span></font></div>
+                    <div>
+                        <span style="font-size: 0.6em;"><font color="#fff">Nishan Pantha / <i>@nishparadox</i></font></span> <br>
+                        <span style="font-size: 0.6em;"><font color="#fff">GitHub/ <i>NISH1001</i></font></span> <br>
+                        <span style="font-size: 0.6em;"><font color="#fff"><i>nishanpantha.com.np</i></font></span> <br>
+                    </div>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>What This Talk About</h2>
+                    </section>
+                    <section>
+                        <p class="fragment fade-in">What ML hype is about?</p>
+                        <p class="fragment fade-in">Guide for beginners</p>
+                        <p class="fragment fade-in">Methods used</p>
+                        <p class="fragment fade-in">Okay! I want to get involved. But how?</p>
+                        <p class="fragment fade-in">General problems we face while doing it</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>But first...</h2>
+                        <p>what is <font color="#0ff">Artificial Intelligence</font>?</p>
+                    </section>
+
+                    <section>
+                        <p>Building systems that can do intelligent things</p>
+                    </section>
+
+                    <section>
+                        <h2>Intelligence is</h2>
+                        <p class="fragment fade-in"><font color="#0ff">Perpective</font></p>
+                        <p class="fragment fade-in"><font color="#42a5f5">Psychological</font></p>
+                        <p class="fragment fade-in"><font color="#af0">Ambiguous</font></p>
+                    </section>
+
+                    <section>
+                        <h3>Map</h3>
+                        <img src="./images/map.jpeg"></img>
+                    </section>
+
+                    <section>
+                        <h3>Translate</h3>
+                        <img src="./images/translate.jpeg"></img>
+                    </section>
+
+                    <section>
+                        <h3>Alpha Go</h3>
+                        <img src="./images/alpha_go.jpg"></img>
+                    </section>
+
+                    <section>
+                        <h3>Youtube's Recommendation</h3>
+                        <img src="./images/rick_and_morty.jpeg"></img>
+                    </section>
+
+                    <section>
+                        <h3>Facebook's News Feed</h3>
+                        <img src="./images/newsfeed.jpg"></img>
+                    </section>
+                    <section>
+                        <h3>Other</h3>
+                        <ul>
+                            <li>Spam Filter in Email</li>
+                            <li>Google Search</li>
+                            <li>Weather Prediction</li>
+                            <li>Games</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>What is <font color="#0ff">Machine Learning</font></h2>
+                    </section>
+
+                    <section>
+                        <p>one of the mechanisms to AI</p>
+                    </section>
+
+                    <section>
+                        <p>Building systems that learn from experience</p>
+                    </section>
+
+                    <section>
+                        <p>Different methods used to <font color="#af0">LEARN</font></p>
+                    </section>
+
+                    <section>
+                        <img src="./images/ml_img.jpeg"></img>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Types of Learning</h2>
+                    </section>
+
+                    <section>
+                        <h2>Supervised Learning</h2>
+                        <p><span style="font-size:0.8em">- Train the system</span></p>
+                        <p><span style="font-size:0.8em">- Student learning from a teacher</span></p>
+                    </section>
+
+                    <section>
+                        <h4>Training Dataset</h4>
+                        <p>- n attributes</p>
+                        <p>- k classes/target<p>
+                    </section>
+
+                    <section>
+                        <table>
+                            <thead><tr>
+                                <th>Glucose</th>
+                                <th>BP</th>
+                                <th>BMI</th>
+                                <th>Age</th>
+                                <th>Diabetes(Y/N)?</th>
+                            </tr></thead>
+                            <tbody><tr>
+                                <td>148</td>
+                                <td>72</td>
+                                <td>33.6</td>
+                                <td>50</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>85</td>
+                                <td>66</td>
+                                <td>26.6</td>
+                                <td>31</td>
+                                <td>N</td>
+                            </tr>
+                           <tr>
+                                <td>97</td>
+                                <td>66</td>
+                                <td>23.6</td>
+                                <td>22</td>
+                                <td>N</td>
+                            </tr></tbody>
+                        </table>
+                        <p>...<p>
+                        <p>...<p>
+                    </section>
+
+                    <section>
+                        <h3>Cat vs Dog</h3>
+                        <img src="./images/cat_dog.jpeg"></img>
+                    </section>
+
+                    <section>
+                        <h3>OCR</h3>
+                        <img src="./images/ocr.jpg" width="700" height="500"></img>
+                    </section>
+
+                    <section>
+                        <h3>Supervised Learning</h3>
+                        <img src="./images/supervised.png" width="800" height="500"></img>
+                    </section>
+
+                    <section>
+                        <h2>Unsupervised Learning</h2>
+                        <p><span style="font-size:0.8em">- Let the system figure out the patterns itself</span></p>
+                        <p><span style="font-size:0.8em">- Students learning on their own</span></p>
+                    </section>
+
+                    <section>
+                        <img src="./images/own.jpeg"></img>
+                    </section>
+
+                    <section>
+                        <h3>Dataset</h3>
+                        <p>- n attributes</p>
+                        <p>- no target class/label<p>
+                    </section>
+
+                    <section>
+                        <img src="./images/unsupervised.jpg"></img>
+                    </section>
+
+                    <section>
+                        <h2>Usage</h2>
+                        <p>- Topic modelling<p>
+                        <p>- Unusal activity detection<p>
+                        <p>- Grouping similar texts</p>
+                    </section>
+
+                    <section>
+                        <h2>Reinforcement Learning</h2>
+                        <p>- Rewards based learning<p>
+                    </section>
+
+                    <section>
+                        <p><em>
+                            I don't know how to act in this environment, can you find a good behavior and meanwhile I'll give you feedback.
+                        </em></p>
+                    </section>
+
+                    <section>
+                        <img src="./images/reinforcement.png"></img>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Categories based on Outputs</h2>
+                    </section>
+
+                    <section>
+                        <h2>Classification</h2>
+                        <p class="fragment fade-in"><span style="font-size:0.8em">Outputs as </span>
+                            <font color="#0ff">class labels</font></p>
+                    </section>
+
+                    <section>
+                        <h3>Hot Dog or Not?</h3>
+                        <img src="./images/not-hotdog.png"></img>
+                    </section>
+
+                    <section>
+                        <img src="./images/decision_tree.jpeg"></img>
+                    </section>
+
+                    <section>
+                        <h2>Regression</h2>
+                        <p class="fragment fade-in"><span style="font-size:0.8em">Outputs as </span>
+                            <font color="#0ff">continuous values</font></p>
+                    </section>
+
+                    <section>
+                        <p class="fragment fade-in">Find relationship among variables</p>
+                        <p class="fragment fade-in">Y = F(X) ?</p>
+                    </section>
+
+                    <section>
+                        <img src="./images/extrapolation.png" width="700" height="500"></img>
+                    </section>
+
+                    <section>
+                        <h3>Linear Regression</h3>
+                        <img src="./images/linear_regression.gif" width="800" height="550"></img>
+                    </section>
+
+                    <section>
+                        <h2>Clustering</h2>
+                        <p class="fragment fade-in"><font color="#0ff">Unsupervised</font></p>
+                        <p class="fragment fade-in"><font color="#aff">Data Intensive</font></p>
+                    </section>
+
+                    <section>
+                        <img src="./images/clustering.png" width="700" height="500"></img>
+                    </section>
+
+                    <section>
+                        <img src="./images/kmeans.gif" width="700" height="500"></img>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Data?</h3>
+                        <img src="./images/machine_learning.png"></img>
+                    </section>
+
+                    <section>
+                        <h3>Computation Intensive</h3>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>How do I start ?</h3>
+                    </section>
+
+                    <section>
+                        <h3>Base Knowledge</h3>
+                        <p class="fragment fade-in">Linear Algebra</p>
+                        <p class="fragment fade-in">Probability and Statistics</p>
+                        <p class="fragment fade-in">Multivariate Calculus</p>
+                        <p class="fragment fade-in">Programming</p>
+                        <p class="fragment fade-in">Data Structures and Algorithms</p>
+                    </section>
+
+                    <section>
+                        <h3>Linear Algebra</h3>
+                        <p>- Matrices</p>
+                        <p>- Vectors</p>
+                    </section>
+
+                    <section>
+                        <h3>Probability and Statistics</h3>
+                        <p>- The Basics</p>
+                        <p>- Bayes Theorem?</p>
+                        <p>- Distribution</p>
+                        <p>- Hypothesis Testing</p>
+                    </section>
+
+                    <section>
+                        <h3>Take an online course</h3>
+                        <ul>
+                            <li>Machine Learning by Andrew NG</li>
+                            <li>Linear Algebra By Gilbert Strang</li>
+                            <li>Neural Networks for Machine Learning By Geoffrey Hinton</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>There's more</h3>
+                        <img src="./images/wait.jpg"></img>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Bottom Up Learning</h3>
+                    </section>
+
+                    <section>
+                        <h3>Top Down Learning</h3>
+                    </section>
+                </section>
+
+                <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+                    <h2>Implement. Implement. Implement.</h2>
+                    <p class="fragment fade-in"><font color="#000">Don't Hesitate To Code</font></p>
+                </section>
+
+                <section data-transition="slide" data-background="#00533c" data-background-transition="zoom">
+                    <h2>Keep on Experimenting</h2>
+                </section>
+
+                <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+                    <h2>Learn. Share.</h2>
+                </section>
+
+
+
+            </div>
+
+		</div>
+
+		<script src="./lib/js/head.min.js"></script>
+		<script src="./js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				mouseWheel: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './plugin/zoom-js/zoom.js', async: true },
+					{ src: './plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
